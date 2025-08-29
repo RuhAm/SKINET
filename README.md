@@ -1,8 +1,10 @@
 # SKINET
-Trend filtered support vector machine to detect natural selection from genomic autocovariation
+<b>S</b>upport vector <b>K</b>ernel for <b>I</b>nferring <b>N</b>atural selection and <b>E</b>volutionary <b>T</b>arget detection
+
+<i>SKINET</i> is a framework to distinguish signs of selective sweep from genomic data. We use a custom kernel using Support Vector Machine (SVM) framework to facilitate classification using machine learning. This software package can be used for applying <i>SKINET</i> to classify any genetic regions into sweep or neutral (i.e, regions showing signs of selective sweep and region without them). We demonstrate how to work with simulated and empirical data in the .vcf format in a step by step fashion in this implementation. 
 
 
-# 1.0 Download and installation
+
 
 
 Downloads and requirements
@@ -12,7 +14,7 @@ First clone the repo using the following command
 
         git clone https://github.com/RuhAm/SKINET
 
-We will need `Python3`, `R` and `MATLAB` installed for different parts of the
+We will need `Python3` installed for different parts of the
 project.
 
 For `Python3` dependencies, please install the following packages found in the `requirements.txt` file inside the `./SKINET` folder using the following commands. 
@@ -115,8 +117,8 @@ For example, we use the following command to train the <i>SKINET</i>[D1] model w
 The resulting confusion matrix and probabilities will be saved in the `./SKINET/Results` folder. 
 
 
-## Empirical application
-
+Empirical application
+===========================================
 We use the tool <i>SISSSCO</i> to convert the .ms and .vcf files into summary statistic arrays (for training data) and use the multitaper trasformation for image generation.
 
 ## Transforming input .ms files to summary statistic arrays

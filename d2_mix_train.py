@@ -20,7 +20,7 @@ from sklearn.metrics import hinge_loss
 from sklearn import metrics
 from sklearn.metrics.pairwise import euclidean_distances
 
-RES_PATH = 'results_10kperclass/'
+RES_PATH = 'Results/'
 DATA_PATH = 'Data/'
 
 # argument parser

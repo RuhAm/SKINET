@@ -19,7 +19,7 @@ from sklearn.model_selection import cross_val_score
 from sklearn.metrics import hinge_loss
 from sklearn import metrics
 
-RES_PATH = 'results_10kperclass/'
+RES_PATH = 'Results/'
 DATA_PATH = 'Data/'
 
 # argument parser

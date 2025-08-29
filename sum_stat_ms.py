@@ -1,13 +1,7 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# In[16]:
 
-
-
-
-
-# In[17]:
 
 
 """
@@ -30,7 +24,7 @@ parser.add_argument('number', type=int, help= 'Number of .ms files of the chosen
 args = parser.parse_args()
 
 
-# In[40]:
+
 
 
 val = args.pref
@@ -41,7 +35,7 @@ class_name = sub
 
 
 
-# In[33]:
+
 
 path0 = os.getcwd()
 path1 = path0 + "/Data/MS"
@@ -139,7 +133,7 @@ def pi_stat(num_text_file, num_strands, SNP_range, window_length, num_stride):
 
 
 
-# In[18]:
+
 
 
 """
@@ -305,12 +299,12 @@ def all_stat(num_text_file, num_strands, SNP_range, window_length, num_stride):
 
     return h1_per_window, h12_per_window, h2h1_per_window, p1_per_window, p2_per_window, p3_per_window, p4_per_window, p5_per_window
 
-# In[19]:
+
 
 pi_all = []
 
 
-# In[20]:
+
 
 
 for i in range(num_):
@@ -321,7 +315,7 @@ for i in range(num_):
         
 
 
-# In[21]:
+
 
 
 h1_all = [] 
@@ -374,11 +368,11 @@ for i in all_summary_stats:
         df[pos] = list(i.iloc[:, j])
     stat+=1
 print("dataset shape : " , df.shape)
-#d
+
 df.iloc[:, 128:256].to_csv(
     path0 + '/Summary_statistics/' + 'training_h12' + class_name + '.csv',
     index=False,
     header=False
 )
 
-#df.to_csv(path0 + '/Summary_statistics/' +'training_'+ class_name+ '.csv', index=False, header= False)
+

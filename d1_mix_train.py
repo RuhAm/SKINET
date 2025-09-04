@@ -35,7 +35,9 @@ print('argument parser: ', args)
 
 
 
-max_range = len(os.listdir(os.path.join(DATA_PATH, 'Sweep')))
+files = os.listdir(os.path.join(DATA_PATH, 'Sweep'))
+resized_files = [i for i in files if 'resized_' in i]
+max_range = len(resized_files)
 print(f'Total sweep files found: {max_range}')
 
 # train test sampling

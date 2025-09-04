@@ -14,10 +14,10 @@ First clone the repo using the following command
 
         git clone https://github.com/RuhAm/SKINET
 
-We will need `Python3` installed for different parts of the
+We will need `python3` installed for different parts of the
 project.
 
-For `Python3` dependencies, please install the following packages found in the `requirements.txt` file inside the `./SKINET` folder using the following commands. 
+For `python3` dependencies, please install the following packages found in the `requirements.txt` file inside the `./SKINET` folder using the following commands. 
 
 `cd ./SKINET`
 
@@ -37,31 +37,31 @@ We will need to convert the .ms files for sweep and neutral observations that ar
 
 To convert the .ms files into .csv format, please use the following command:
 
-    Python3 ms_to_csv.py <number of files> <class>
+    python3 ms_to_csv.py <number of files> <class>
 
 The first argument is the number of files that the user wants to convert to csv. The second argument takes on 0 or 1 as value where 1 is used for sweep observations and 0 is used for neutral observations.
 
 For example, we use the following command to preprocess the 100 sweep observations that are in .ms format.
 
-    Python3 ms_to_csv.py 100 1
+    python3 ms_to_csv.py 100 1
 
 we use the following command to preprocess the 100 neutral observations that are in .ms format.
 
-    Python3 ms_to_csv.py 100 0
+    python3 ms_to_csv.py 100 0
 
 Now that we have our .csv files, we go on to globally sort them and process the haplotypes using our unique haplotype alignment strategy using the following commands:
 
-    Python3 parse_csv.py <number of files> <class>
+    python3 parse_csv.py <number of files> <class>
 
 The first argument is the number of csv files that the user wants to process. The second argument takes on 0 or 1 as value where 1 is used for processing sweep observations and 0 is used for neutral observations.
 
 For example, we use the following command to preprocess the 100 sweep observations.
 
-    Python3 parse_csv.py 100 1
+    python3 parse_csv.py 100 1
 
 We use the following command to preprocess the 100 neutral observations.
 
-    Python3 parse_csv.py 100 0
+    python3 parse_csv.py 100 0
 
 Model training and testing
 ===========================================
@@ -72,11 +72,11 @@ These scripts allow users to train the <i>SKINET</i> models for detecting positi
 
 This script allows users to train <i>SKINET</i>[D1] model and allows them to specify the number of training and test observations. 
 
-    Python3 d1_train.py <--train_obs TRAIN_OBS> <--test_obs TEST_OBS>
+    python3 d1_train.py <--train_obs TRAIN_OBS> <--test_obs TEST_OBS>
 
 For example, we use the following command to train the <i>SKINET</i>[D1] model with 80 observations per class for training and 20 observations per class for testing.
 
-    Python3 d1_train.py --train_obs 80 --test_obs 20
+    python3 d1_train.py --train_obs 80 --test_obs 20
 
 The resulting confusion matrix and probabilities will be saved in the `./SKINET/Results` folder. 
 
@@ -84,11 +84,11 @@ The resulting confusion matrix and probabilities will be saved in the `./SKINET/
 
 This script allows users to train <i>SKINET</i>[D2] model and allows them to specify the number of training and test observations. 
 
-    Python3 d2_train.py <--train_obs TRAIN_OBS> <--test_obs TEST_OBS>
+    python3 d2_train.py <--train_obs TRAIN_OBS> <--test_obs TEST_OBS>
 
 For example, we use the following command to train the <i>SKINET</i>[D2] model with 80 observations per class for training and 20 observations per class for testing.
 
-    Python3 d2_train.py --train_obs 80 --test_obs 20
+    python3 d2_train.py --train_obs 80 --test_obs 20
 
 The resulting confusion matrix and probabilities will be saved in the `./SKINET/Results` folder. 
 
@@ -96,11 +96,11 @@ The resulting confusion matrix and probabilities will be saved in the `./SKINET/
 
 This script allows users to train <i>SKINET</i>[D1-RBF] model and allows them to specify the number of training and test observations. 
 
-    Python3 d1_mix_train.py <--train_obs TRAIN_OBS> <--test_obs TEST_OBS>
+    python3 d1_mix_train.py <--train_obs TRAIN_OBS> <--test_obs TEST_OBS>
 
 For example, we use the following command to train the <i>SKINET</i>[D1] model with 80 observations per class for training and 20 observations per class for testing.
 
-    Python3 d1_mix_train.py --train_obs 80 --test_obs 20
+    python3 d1_mix_train.py --train_obs 80 --test_obs 20
 
 The resulting confusion matrix and probabilities will be saved in the `./SKINET/Results` folder. 
 
@@ -108,11 +108,11 @@ The resulting confusion matrix and probabilities will be saved in the `./SKINET/
 
 This script allows users to train <i>SKINET</i>[D2-RBF] model and allows them to specify the number of training and test observations. 
 
-    Python3 d2_mix_train.py <--train_obs TRAIN_OBS> <--test_obs TEST_OBS>
+    python3 d2_mix_train.py <--train_obs TRAIN_OBS> <--test_obs TEST_OBS>
 
 For example, we use the following command to train the <i>SKINET</i>[D1] model with 80 observations per class for training and 20 observations per class for testing.
 
-    Python3 d2_mix_train.py --train_obs 80 --test_obs 20
+    python3 d2_mix_train.py --train_obs 80 --test_obs 20
 
 The resulting confusion matrix and probabilities will be saved in the `./SKINET/Results` folder. 
 
@@ -125,57 +125,57 @@ We use the tool <i>SISSSCO</i> to convert the .ms and .vcf files into summary st
 
 This script allows users to generate summary statistic arrays from the .ms files of both classes (sweep and neutral).
 
-    Python3 sum_stat_ms.py <.ms file prefix> <Class name | 1 = sweep, 0 = neutral> <number>
+    python3 sum_stat_ms.py <.ms file prefix> <Class name | 1 = sweep, 0 = neutral> <number>
 
 For example, we use the following command to generate summary statistic arrays from the 100 sweep files
 
-    Python3 sum_stat_ms.py CEU_neut 0 100
+    python3 sum_stat_ms.py CEU_neut 0 100
 
 For example, we use the following command to generate summary statistic arrays from the 100 sweep files
 
-    Python3 sum_stat_ms.py CEU_sweep 1 100
+    python3 sum_stat_ms.py CEU_sweep 1 100
 
 
 ## Transforming input summary statistic arrays into multitaper images
 
 This script allows users to convert the summary statistic arrays to multitaper images of both classes (sweep and neutral).
 
-    Python3 Mult.py <sweep_filename> <neutral_filename> <train number> <test number> <validation number>
+    python3 Mult.py <sweep_filename> <neutral_filename> <train number> <test number> <validation number>
 
 For example, we use the following command to generate multitaper images for 80 observations per class for training and 20 observations per class for testing.
 
-    Python3 Mult.py training_h12Sweep.csv training_h12Neutral.csv 80 20 0
+    python3 Mult.py training_h12Sweep.csv training_h12Neutral.csv 80 20 0
 
 
 ## Parsing a VCF file
 
 This script allows users to parse the VCF file that is in the `./SKINET/VCF` folder. We have provided one example vcf file `CEU22.vcf` but users can drop in their own vcf files to parse and. After running the script the parsed file and positions will be saved in the `./SKINET/Parsed_VCF` folder.
    
-    Python3 VCF_parser.py <VCF file name>
+    python3 VCF_parser.py <VCF file name>
 
 For example, we use the following command to parse the `CEU22.vcf` file.
 
-        Python3 VCF_parser.py CEU22.vcf
+        python3 VCF_parser.py CEU22.vcf
 
 ## Generating summary statistics from parsed VCF file
 
 This script allows users to use the parsed VCF file and generate summary statistics. The generated summary statistics file will be saved in the `./SKINET/Summary_statistics` folder in .npy format.
 
-    Python3 sum_stat_vcf.py <Parsed VCF file name>
+    python3 sum_stat_vcf.py <Parsed VCF file name>
 
 For example, we use the following command to use the parsed `parsed_CEU22.npy` file in order to generate summary statistics.
 
-        Python3 sum_stat_vcf.py parsed_CEU22.npy
+        python3 sum_stat_vcf.py parsed_CEU22.npy
 
 ## Multitaper image generation from summary statistics
 
 This script allows users to use the summary statistics .npy file and transform it into multitaper images. The transformed image will be stored in the  `./SKINET/TFA` folder.
 
-  Python3 multitaper_analysis_vcf.py <Empirical summary statistics file name>
+  python3 multitaper_analysis_vcf.py <Empirical summary statistics file name>
 
 For example, we use the following command to use the summary statistics file `empirical_d_CEU22.csv` and generate multitaper images.
 
-        Python3 multitaper_analysis_vcf.py empirical_d_CEU22.csv
+        python3 multitaper_analysis_vcf.py empirical_d_CEU22.csv
 
 
 ## Training the <i>SKINET</i>[D1] and testing with empirical data
@@ -183,11 +183,11 @@ For example, we use the following command to use the summary statistics file `em
 
 This script allows users to train <i>SKINET</i>[D1] model using multitaper transformed images and test using the multitaper transformed empirical image.
 
-    Python3 EMP_d1.py <training filename> <empirical test filename>>
+    python3 EMP_d1.py <training filename> <empirical test filename>>
 
 For example, we use the following command to train the <i>SKINET</i>[D1] model with 80 observations per class for training and 20 observations per class for testing.
 
-    Python3 d1_train.py train_Mul_training_h12.csv empirical_CEU22_multitaper.npy
+    python3 d1_train.py train_Mul_training_h12.csv empirical_CEU22_multitaper.npy
 
 The resulting probabilities will be saved in the `./SKINET/Results` folder. 
 

@@ -74,9 +74,9 @@ This script allows users to train <i>SKINET</i>[D1] model and allows them to spe
 
     python3 d1_train.py <--train_obs TRAIN_OBS> <--test_obs TEST_OBS>
 
-For example, we use the following command to train the <i>SKINET</i>[D1] model with 80 observations per class for training and 20 observations per class for testing.
+For example, we use the following command to train the <i>SKINET</i>[D1] model with 40 observations per class for training and 20 observations per class for testing.
 
-    python3 d1_train.py --train_obs 80 --test_obs 20
+    python3 d1_train.py --train_obs 40 --test_obs 20
 
 The resulting confusion matrix and probabilities will be saved in the `./SKINET/Results` folder. 
 
@@ -86,9 +86,9 @@ This script allows users to train <i>SKINET</i>[D2] model and allows them to spe
 
     python3 d2_train.py <--train_obs TRAIN_OBS> <--test_obs TEST_OBS>
 
-For example, we use the following command to train the <i>SKINET</i>[D2] model with 80 observations per class for training and 20 observations per class for testing.
+For example, we use the following command to train the <i>SKINET</i>[D2] model with 40 observations per class for training and 20 observations per class for testing.
 
-    python3 d2_train.py --train_obs 80 --test_obs 20
+    python3 d2_train.py --train_obs 40 --test_obs 20
 
 The resulting confusion matrix and probabilities will be saved in the `./SKINET/Results` folder. 
 
@@ -98,9 +98,9 @@ This script allows users to train <i>SKINET</i>[D1-RBF] model and allows them to
 
     python3 d1_mix_train.py <--train_obs TRAIN_OBS> <--test_obs TEST_OBS>
 
-For example, we use the following command to train the <i>SKINET</i>[D1] model with 80 observations per class for training and 20 observations per class for testing.
+For example, we use the following command to train the <i>SKINET</i>[D1] model with 40 observations per class for training and 20 observations per class for testing.
 
-    python3 d1_mix_train.py --train_obs 80 --test_obs 20
+    python3 d1_mix_train.py --train_obs 40 --test_obs 20
 
 The resulting confusion matrix and probabilities will be saved in the `./SKINET/Results` folder. 
 
@@ -110,9 +110,9 @@ This script allows users to train <i>SKINET</i>[D2-RBF] model and allows them to
 
     python3 d2_mix_train.py <--train_obs TRAIN_OBS> <--test_obs TEST_OBS>
 
-For example, we use the following command to train the <i>SKINET</i>[D1] model with 80 observations per class for training and 20 observations per class for testing.
+For example, we use the following command to train the <i>SKINET</i>[D1] model with 40 observations per class for training and 20 observations per class for testing.
 
-    python3 d2_mix_train.py --train_obs 80 --test_obs 20
+    python3 d2_mix_train.py --train_obs 40 --test_obs 20
 
 The resulting confusion matrix and probabilities will be saved in the `./SKINET/Results` folder. 
 
@@ -142,9 +142,9 @@ This script allows users to convert the summary statistic arrays to multitaper i
 
     python3 Mult.py <sweep_filename> <neutral_filename> <train number> <test number> <validation number>
 
-For example, we use the following command to generate multitaper images for 80 observations per class for training and 20 observations per class for testing.
+For example, we use the following command to generate multitaper images for 40 observations per class for training and 20 observations per class for testing.
 
-    python3 Mult.py training_h12Sweep.csv training_h12Neutral.csv 80 20 0
+    python3 Mult.py training_h12Sweep.csv training_h12Neutral.csv 40 20 0
 
 
 ## Parsing a VCF file
@@ -185,7 +185,7 @@ This script allows users to train <i>SKINET</i>[D1] model using multitaper trans
 
     python3 EMP_d1.py <training filename> <empirical test filename>>
 
-For example, we use the following command to train the <i>SKINET</i>[D1] model with 80 observations per class for training and 20 observations per class for testing.
+For example, we use the following command to train the <i>SKINET</i>[D1] model with 40 observations per class for training and 20 observations per class for testing.
 
     python3 d1_train.py train_Mul_training_h12.csv empirical_CEU22_multitaper.npy
 

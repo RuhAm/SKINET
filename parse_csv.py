@@ -36,7 +36,7 @@ cls_folder = 'Sweep' if class_label==1 else 'Neutral'
 
 for i in range(num_):
 
-    file_path = os.path.join('Data', cls_folder, sub+str(i+1)+".csv")
+    file_path = os.path.join('Data', cls_folder, sub+str(i)+".csv")
 
     # df = pd.read_csv("./Data/MS/"+sub+"train_"+str(i+1)+".csv",header=None)
     df = pd.read_csv(file_path, header=None)
@@ -61,7 +61,7 @@ for i in range(num_):
     indexlist=np.argsort(np.linalg.norm(A,axis=1, ord=1))
     sym_sortedA = A[indexlist]
 
-    save_file_path = os.path.join('Data', cls_folder, sub+"train_L1_"+str(i+1)+".csv")
+    save_file_path = os.path.join('Data', cls_folder, sub+"train_L1_"+str(i)+".csv")
     # pd.DataFrame(sym_sortedA).to_csv("./Data/CSV_files/"+sub+"train_L1_"+str(i+1)+".csv")
     pd.DataFrame(sym_sortedA).to_csv(save_file_path)
     print(i)
@@ -75,7 +75,7 @@ stride=10
 
 # generalized
 for i in range(num_):
-    read_file_path = os.path.join('Data', cls_folder, sub+"train_L1_"+str(i+1)+".csv")
+    read_file_path = os.path.join('Data', cls_folder, sub+"train_L1_"+str(i)+".csv")
     # df=pd.read_csv("./Data/CSV_files/"+sub+"train_L1_"+str(i+1)+".csv", index_col=0)
     df=pd.read_csv(read_file_path, index_col=0)
     df=np.asmatrix(df)

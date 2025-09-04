@@ -35,8 +35,9 @@ print('argument parser: ', args)
 
 
 
-
-max_range = len(os.listdir(os.path.join(DATA_PATH, 'Sweep')))
+files = os.listdir(os.path.join(DATA_PATH, 'Sweep'))
+resized_files = [i for i in files if 'resized_' in i]
+max_range = len(resized_files)
 print(f'Total sweep files found: {max_range}')
 
 # train test sampling
@@ -55,8 +56,8 @@ Train_neutral = np.empty((len(Train1), 64, 64))
 
 # Read sweep files
 for i in range(len(Train1)):
-    filename = os.path.join(DATA_PATH, 'Sweep', "resized.2_" + str(Train1[i]) + ".csv")
-    # filename = "/mnt/archive/home/aminm2021/Desktop/Trend-filtered SVM/CEU_2/CEU_2_May7/Cropped resized sweep/resized.2_" + str(Train1[i]) + ".csv"
+    filename = os.path.join(DATA_PATH, 'Sweep', "resized_" + str(Train1[i]) + ".csv")
+    # filename = "/mnt/archive/home/aminm2021/Desktop/Trend-filtered SVM/CEU_2/CEU_2_May7/Cropped resized sweep/resized__" + str(Train1[i]) + ".csv"
     df = pd.read_csv(filename, index_col=0)
     Train_sweep[i] = df.to_numpy()
     if i % 10 == 9:
@@ -64,8 +65,8 @@ for i in range(len(Train1)):
 
 # Read neutral files
 for i in range(len(Train1)):
-    filename = os.path.join(DATA_PATH, 'Neutral', "resized.2_" + str(Train1[i]) + ".csv")
-    # filename = "/mnt/archive/home/aminm2021/Desktop/Trend-filtered SVM/CEU_2/CEU_2_May7/Cropped resized neutral/resized.2_" + str(Train1[i]) + ".csv"
+    filename = os.path.join(DATA_PATH, 'Neutral', "resized_" + str(Train1[i]) + ".csv")
+    # filename = "/mnt/archive/home/aminm2021/Desktop/Trend-filtered SVM/CEU_2/CEU_2_May7/Cropped resized neutral/resized__" + str(Train1[i]) + ".csv"
     df = pd.read_csv(filename, index_col=0)
     Train_neutral[i] = df.to_numpy()
     if i % 10 == 9:
@@ -82,8 +83,8 @@ Test_neutral = np.empty((len(Test1), 64, 64))
 
 # Read sweep files
 for i in range(len(Test1)):
-    filename = os.path.join(DATA_PATH, 'Sweep', "resized.2_" + str(Test1[i]) + ".csv")
-    # filename = "/mnt/archive/home/aminm2021/Desktop/Trend-filtered SVM/CEU_2/CEU_2_May7/Cropped resized sweep/resized.2_" + str(Train1[i]) + ".csv"
+    filename = os.path.join(DATA_PATH, 'Sweep', "resized_" + str(Test1[i]) + ".csv")
+    # filename = "/mnt/archive/home/aminm2021/Desktop/Trend-filtered SVM/CEU_2/CEU_2_May7/Cropped resized sweep/resized__" + str(Train1[i]) + ".csv"
     df = pd.read_csv(filename, index_col=0)
     Test_sweep[i] = df.to_numpy()
     if i % 10 == 9:
@@ -91,8 +92,8 @@ for i in range(len(Test1)):
 
 # Read neutral files
 for i in range(len(Test1)):
-    filename = os.path.join(DATA_PATH, 'Neutral', "resized.2_" + str(Test1[i]) + ".csv")
-    # filename = "/mnt/archive/home/aminm2021/Desktop/Trend-filtered SVM/CEU_2/CEU_2_May7/Cropped resized neutral/resized.2_" + str(Train1[i]) + ".csv"
+    filename = os.path.join(DATA_PATH, 'Neutral', "resized_" + str(Test1[i]) + ".csv")
+    # filename = "/mnt/archive/home/aminm2021/Desktop/Trend-filtered SVM/CEU_2/CEU_2_May7/Cropped resized neutral/resized__" + str(Train1[i]) + ".csv"
     df = pd.read_csv(filename, index_col=0)
     Test_neutral[i] = df.to_numpy()
     if i % 10 == 9:

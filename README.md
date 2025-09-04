@@ -33,7 +33,7 @@ Users can preprocess the sweep and neutral .ms files using global sorting and al
 
         cd ./SKINET
 
-We will need to convert the .ms files for sweep and neutral observations that are present in the `./SKINET/Data/MS` folder. The folder contains two subdirectories `./SKINET/Data/MS/Neutral` and `./SKINET/Data/MS/Sweep` that contains the .ms files. The directories are preloaded with 100 observations per class. Please feel free to replace the files with appropriate number of observations as per your experimental needs.
+We will need to convert the .ms files for sweep and neutral observations that are present in the `./SKINET/Data/MS` folder. The folder contains two subdirectories `./SKINET/Data/MS/Neutral` and `./SKINET/Data/MS/Sweep` that contains the .ms files. The directories are preloaded with 50 observations per class. Please feel free to replace the files with appropriate number of observations as per your experimental needs.
 
 To convert the .ms files into .csv format, please use the following command:
 
@@ -41,13 +41,13 @@ To convert the .ms files into .csv format, please use the following command:
 
 The first argument is the number of files that the user wants to convert to csv. The second argument takes on 0 or 1 as value where 1 is used for sweep observations and 0 is used for neutral observations.
 
-For example, we use the following command to preprocess the 100 sweep observations that are in .ms format.
+For example, we use the following command to preprocess the 50 sweep observations that are in .ms format.
 
-    python3 ms_to_csv.py 100 1
+    python3 ms_to_csv.py 50 1
 
-we use the following command to preprocess the 100 neutral observations that are in .ms format.
+we use the following command to preprocess the 50 neutral observations that are in .ms format.
 
-    python3 ms_to_csv.py 100 0
+    python3 ms_to_csv.py 50 0
 
 Now that we have our .csv files, we go on to globally sort them and process the haplotypes using our unique haplotype alignment strategy using the following commands:
 
@@ -55,13 +55,13 @@ Now that we have our .csv files, we go on to globally sort them and process the 
 
 The first argument is the number of csv files that the user wants to process. The second argument takes on 0 or 1 as value where 1 is used for processing sweep observations and 0 is used for neutral observations.
 
-For example, we use the following command to preprocess the 100 sweep observations.
+For example, we use the following command to preprocess the 50 sweep observations.
 
-    python3 parse_csv.py 100 1
+    python3 parse_csv.py 50 1
 
-We use the following command to preprocess the 100 neutral observations.
+We use the following command to preprocess the 50 neutral observations.
 
-    python3 parse_csv.py 100 0
+    python3 parse_csv.py 50 0
 
 Model training and testing
 ===========================================
@@ -127,13 +127,13 @@ This script allows users to generate summary statistic arrays from the .ms files
 
     python3 sum_stat_ms.py <.ms file prefix> <Class name | 1 = sweep, 0 = neutral> <number>
 
-For example, we use the following command to generate summary statistic arrays from the 100 sweep files
+For example, we use the following command to generate summary statistic arrays from the 50 sweep files
 
-    python3 sum_stat_ms.py CEU_neut 0 100
+    python3 sum_stat_ms.py CEU_neut 0 50
 
-For example, we use the following command to generate summary statistic arrays from the 100 sweep files
+For example, we use the following command to generate summary statistic arrays from the 50 sweep files
 
-    python3 sum_stat_ms.py CEU_sweep 1 100
+    python3 sum_stat_ms.py CEU_sweep 1 50
 
 
 ## Transforming input summary statistic arrays into multitaper images

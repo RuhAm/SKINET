@@ -52,7 +52,7 @@ def addIndividuals(np_array):
 
 def saveToCSV(i):
     filename_ms = f"./Data/MS/{cls_folder}/{sub}{i+1}.ms"
-    filename_csv = f"./Data/{cls_folder}/{sub}{i+1}.csv"
+    filename_csv = f"./Data/{cls_folder}/{sub}{i}.csv"
 
     file = open(filename_ms, 'r')
     Lines = file.readlines()

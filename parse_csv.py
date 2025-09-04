@@ -111,7 +111,7 @@ for i in range(num_):
     #pd.DataFrame(sortd).to_csv("/Volumes/MyPassport/Const Easy/Sweep/ALLaveraged_" + str(i) + ".csv")
     d=resize(sortd, (64, 64))
 
-    output_file_path = os.path.join('Data', cls_folder, "resized_"+str(i+1)+".csv")
+    output_file_path = os.path.join('Data', cls_folder, "resized_"+str(i)+".csv")
     # pd.DataFrame(d).to_csv("./Data/CSV_files/"+sub+"train_align_"+str(i+1)+".csv")
     pd.DataFrame(d).to_csv(output_file_path)
 #     print(i)

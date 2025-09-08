@@ -109,14 +109,14 @@ y_train = All_classes_train_xy.iloc[:, -2:]
 y_test = All_classes_test_xy.iloc[:, -2:]
 y_val = All_classes_val_xy.iloc[:, -2:]
 
-y_train.to_csv('TFA/800/Mul/train_labels.csv', index= False)
-y_test.to_csv('TFA/800/Mul/test_labels.csv', index= False)
-y_val.to_csv('TFA/800/Mul/val_labels.csv', index= False)
+y_train.to_csv('TFA/train_labels.csv', index= False)
+y_test.to_csv('TFA/test_labels.csv', index= False)
+y_val.to_csv('TFA/val_labels.csv', index= False)
 
 spec_tensor_train = pd.DataFrame(spec_tensor_train)
 spec_tensor_val = pd.DataFrame(spec_tensor_val)
 spec_tensor_test = pd.DataFrame(spec_tensor_test)
 
-spec_tensor_train.to_csv('TFA/800/Mul/2train_Mul_800'+sw_file[:-10]+'.csv', index= False)
-spec_tensor_test.to_csv('TFA/800/Mul/2test_Mul_800'+sw_file[:-10]+'.csv', index= False)
-spec_tensor_val.to_csv('TFA/800/Mul/2val_Mul_800'+sw_file[:-10]+'.csv', index= False)
+spec_tensor_train.to_csv('TFA/train_Mul_'+sw_file[:-4]+'.csv', index= False)
+spec_tensor_test.to_csv('TFA/test_Mul_'+sw_file[:-4]+'.csv', index= False)
+spec_tensor_val.to_csv('TFA/val_Mul_'+sw_file[:-4]+'.csv', index= False)

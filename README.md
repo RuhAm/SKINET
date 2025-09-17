@@ -199,9 +199,9 @@ To extract, run the following code on your terminal:
 
 ```bash
 tar -xvzf Data.tar.gz
-
+```
 This will create the following directory structure inside the Data folder:
-
+```
 Home/
 └── Data/
     ├── Var_recomb_Neutral_01/
@@ -214,16 +214,16 @@ Home/
     └── Variable_Mutation_CEU_200haplotypes/
         ├── Neutral/
         └── Sweep/
+```
+## Folder Descriptions
 
-Folder Descriptions
-
-Var_recomb_Neutral_01 and Var_recomb_Neutral1
+*Var_recomb_Neutral_01* and *Var_recomb_Neutral1*
 Contain test replicates with variable recombination rates: simulated with recombination rates drawn from an exponential distribution with mean of 10⁻¹⁰ or 10⁻⁹, truncated at three times the mean. 
 
-CEU_200haplotypes/
+*CEU_200haplotypes*
 Contains the Neutral and Sweep training data (10,000 per class) and test files (1,000 per class). 
 
-Variable_Mutation_CEU_200haplotypes/
+*Variable_Mutation_CEU_200haplotypes*
 Contains the Neutral and Sweep test files (1,000 per class) under variable mutation rate. 
 
 

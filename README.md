@@ -173,9 +173,9 @@ This script allows users to use the summary statistics .npy file and transform i
 
   python3 multitaper_analysis_vcf.py <Empirical summary statistics file name>
 
-For example, we use the following command to use the summary statistics file `empirical_d_CEU22.csv` and generate multitaper images.
+For example, we use the following command to use the summary statistics file `empirical_CEU22.csv` and generate multitaper images.
 
-        python3 multitaper_analysis_vcf.py empirical_d_CEU22.csv
+        python3 multitaper_analysis_vcf.py empirical_CEU22.csv
 
 
 ## Training the <i>SKINET</i>[D1] and testing with empirical data
@@ -191,7 +191,40 @@ For example, we use the following command to train the <i>SKINET</i>[D1] model w
 
 The resulting probabilities will be saved in the `./SKINET/Results` folder. 
 
+## Data Availability
 
+We have made available the simulated data used in our analyses. The full dataset (including training, testing, and robustness scenario replicates) is available from Zenodo (https://zenodo.org/records/17101280): DOI:10.5281/zenodo.17101280.
+
+To extract, run the following code on your terminal:
+
+```bash
+tar -xvzf Data.tar.gz
+
+This will create the following directory structure inside the Data folder:
+
+Home/
+└── Data/
+    ├── Var_recomb_Neutral_01/
+    ├── Var_recomb_Neutral1/
+    ├── CEU_200haplotypes/
+    │   ├── Neutral/
+    │   │   └── Test_files/
+    │   └── Sweep/
+    │       └── Test_files/
+    └── Variable_Mutation_CEU_200haplotypes/
+        ├── Neutral/
+        └── Sweep/
+
+Folder Descriptions
+
+Var_recomb_Neutral_01 and Var_recomb_Neutral1
+Contain test replicates with variable recombination rates: simulated with recombination rates drawn from an exponential distribution with mean of 10⁻¹⁰ or 10⁻⁹, truncated at three times the mean. 
+
+CEU_200haplotypes/
+Contains the Neutral and Sweep training data (10,000 per class) and test files (1,000 per class). 
+
+Variable_Mutation_CEU_200haplotypes/
+Contains the Neutral and Sweep test files (1,000 per class) under variable mutation rate. 
 
 
 

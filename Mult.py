@@ -117,6 +117,6 @@ spec_tensor_train = pd.DataFrame(spec_tensor_train)
 spec_tensor_val = pd.DataFrame(spec_tensor_val)
 spec_tensor_test = pd.DataFrame(spec_tensor_test)
 
-spec_tensor_train.to_csv('TFA/train_Mul_'+sw_file[:-4]+'.csv', index= False)
+spec_tensor_train.to_csv('TFA/train_sum_Mul_'+'.csv', index= False)
 spec_tensor_test.to_csv('TFA/test_Mul_'+sw_file[:-4]+'.csv', index= False)
 spec_tensor_val.to_csv('TFA/val_Mul_'+sw_file[:-4]+'.csv', index= False)

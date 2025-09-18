@@ -16,7 +16,7 @@ from sklearn.metrics import accuracy_score, confusion_matrix, roc_auc_score
 from sklearn import preprocessing
 
 
-RES_PATH = 'Results/EMP/'
+RES_PATH = 'Results/'
 DATA_PATH = 'TFA/'
 
 

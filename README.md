@@ -187,7 +187,7 @@ This script allows users to train <i>SKINET</i>[D1] model using multitaper trans
 
 For example, we use the following command to train the <i>SKINET</i>[D1] model with 40 observations per class for training and 10 observations per class for testing.
 
-    python3 d1_train.py train_sum_Mul.csv empirical_CEU22_multitaper.npy
+    python3 EMP_d1.py train_sum_Mul.csv empirical_CEU22_multitaper.npy
 
 The resulting probabilities will be saved in the `./SKINET/Results` folder. 
 

@@ -67,11 +67,11 @@ data = np.load(file_path)
 data_subset = data[:50]
 
 # convert to DataFrame
-df = pd.DataFrame(data_subset)
+df = pd.DataFrame(data)
 
 # save to CSV
 # csv_path = "/mnt/beegfs/home/aminm2021/Desktop/skinet/TFA/pirical_d_CEU22_first50.csv"
-csv_path = os.path.join(DATA_PATH, "pirical_d_CEU22.csv")
+csv_path = os.path.join(DATA_PATH, "empirical_CEU22.csv")
 df.to_csv(csv_path, index=False)
 
 print(f"Saved first 50 rows to: {csv_path}")
@@ -79,7 +79,7 @@ print(f"Saved first 50 rows to: {csv_path}")
 
 # In[129]:
 
-filename = os.path.join(DATA_PATH, "pirical_d_CEU22.csv")
+filename = os.path.join(DATA_PATH, "empirical_CEU22.csv")
 # filename = "/mnt/beegfs/home/aminm2021/Desktop/skinet/TFA/pirical_d_CEU22_first50.csv"
 df = pd.read_csv(filename)
 
